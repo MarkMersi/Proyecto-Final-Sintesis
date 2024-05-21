@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@keyframes EaseIn {
+    from {
+        transform: translateX(-100px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes EaseInFirst {
+    from {
+        transform: translateX(-50px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    margin-top: 65px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 5px 4px 0 rgba(0, 0, 0, 0.12);
+    z-index: 20;
+}
+
+header a:any-link{
+    color: black;
+}
+
+header img {
+    width: 220px;
+    margin-left: 12px;
+}
+
+.nav-item {
+    margin-left: 12px;
+    margin-top: 6px;
+}
+
+.nav-underline .first {
+    margin-left: 60px;
+}
+
+.membership {
+    position: absolute;
+    display: block;
+    top: 5px;
+    right: 162px;
+}
+
+.membership a:any-link {
+    color: red;
+}
+
+.lang {
+    position: absolute;
+    top: 15px;
+    right: 42px;
+}
+
+.flag {
+    margin-top: -5px;
+    margin-right: 10px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.carousel-content {
+    position: absolute;
+    bottom: 13%;
+    left: 12%;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.carousel-content h1 {
+    font-size: 56px;
+    text-shadow: 3px 3px 4px black;
+    animation: EaseIn 1.4s ease-out forwards;
+}
+.carousel-content p {
+    font-size: 32px;
+    text-shadow: 3px 3px 4px black;
+    animation: EaseIn 1.4s ease-out forwards 0.14s;
+}
+
+.page-wrapper {
+    width: 62vw;
+    margin: auto;
+    margin-top: 32px;
+}
+
+.section-h2 {
+    margin-top: 42px;
+    font-weight: 500;
+}
+
+.section-divider {
+    margin-top: 6px;
+    border: 4px solid rgb(255, 0, 0);
+    width: 15%;
+}
+
+.news {
+    display: flex;
+    margin-top: 48px;
+    justify-content: space-between;
+}
+
+
+.news img {
+    width: 100%;
+    height: auto;
+}
+
+.news .column {
+    flex: 33% 1;
+    margin-right: 42px;
+}
+
+.column h3{
+    padding-top: 12px;
+}
+
+.column p {
+    padding-top: 6px;
+}
+
+.column a {
+    color: red;
+    text-decoration: none;
+}
+
+.column h4{
+    margin-bottom: 26px;
+}
+
+.column hr {
+    padding-top: -12px
+}
+
+.donations {
+    margin-top: 72px;
+}
+
+.donations h1 {
+    color: rgb(0, 173, 173);
+    font-size: 76px;
+}
+
+.donations p {
+    font-size: 36px;
+}
+
+.members {
+    margin-top: 112px;
+    text-align: right;
+}
+
+.members h1 {
+    color: rgb(0, 175, 0);
+    font-size: 76px;
+}
+
+.members p {
+    font-size: 36px;
+}

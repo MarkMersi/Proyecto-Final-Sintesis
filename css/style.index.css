@@ -12,6 +12,16 @@
     }
 }
 
+@keyframes EaseInSmaller {
+    from {
+        transform: translateX(-50px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
 /* Applied custom font and added margin to the top to support the fixed navbar */
 body {
     font-family: "Rubik", sans-serif;
@@ -89,14 +99,12 @@ body {
     font-size: 56px;
     text-shadow: 3px 3px 4px black;
     animation: EaseIn 1.4s ease-out forwards;
-    container-name: carouselH1;
 }
 
 .carousel-content p {
     font-size: 32px;
     text-shadow: 3px 3px 4px black;
-    animation: EaseIn 1.4s ease-out forwards 0.14s;
-    container-name: carouselP;
+    animation: EaseIn 1.4s ease-out forwards .14s;
 }
 /* End of custom carousel styles */
 /* ----------------------------- */
@@ -184,9 +192,11 @@ body {
 
     .carousel h1 {
         font-size: 7.4vw;
+        animation: EaseInSmaller 1.4s ease-out forwards;
     }
 
     .carousel p {
         font-size: 4.2vw;
+        animation: EaseInSmaller 1.4s ease-out forwards .14s;
     }
 }

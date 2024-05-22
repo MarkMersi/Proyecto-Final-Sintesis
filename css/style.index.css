@@ -1,5 +1,7 @@
+/* Custom font */ 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+/* Animations for carousel text */
 @keyframes EaseIn {
     from {
         transform: translateX(-100px);
@@ -10,132 +12,181 @@
     }
 }
 
-@keyframes EaseInFirst {
-    from {
-        transform: translateX(-50px);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
+/* Applied custom font and added margin to the top to support the fixed navbar */
 body {
     font-family: "Rubik", sans-serif;
+    margin-top: 81px;
 }
 
+/* Navbar custom styles */
+/* -------------------- */
 .navbar {
-    background-color: #fff;
-    box-shadow: 2px 2px 6px 4px rgba(0, 0, 0, 0.145);
+    background-color: #fff; /* Custom background color */
+    box-shadow: 2px 2px 6px 4px rgba(0, 0, 0, 0.145); /* Shadow to add more emphasis on the navbar */
+}
+
+.membership-link {
+    padding-right: 34px; /* Separated the memebership link from the language selector */ 
+    padding-top: 2px; /* Aligned the y axis of the link to match the others */
+}
+
+.navbar .active {
+    font-weight: 700; /* Added bold text to the active item - this will work for any link that's accessed in their correspondent page */
+} 
+
+.navbar button {
+    margin-right: 12px; /* Separated the hamburger icon from the right margin of the page to make it stand out */
+}
+
+.nav-link {
+    transition: all .2s ease-out; /* Transition for the hover color change */
+    color: black; /* This sets the color black to all of the links inside navbar */
+}
+
+.nav-link:hover {
+    color: turquoise; /* Color to change on hover */
+}
+
+.membership-link .nav-link:hover {
+    color: red; /* Exclusive color hover for membership */
+}
+
+.nav-item {
+    padding-left: 16px; /* Separates the links further from eachother */
 }
 
 .navbar-brand img {
-    padding-left: ;
-    width: 220px;
+    margin-left: 22px; /* Separates the image from the left margin to make it stand out */
+    width: 220px; /* Custom width for the brand image to make it fit the navbar without exceeding the predefined height */
+    margin-right: 32px; /* Margin to separate the first link of the navbar from the logo further than normal */
 }
 
 .language-flag {
-    width: 40px;
-    border-radius: 5px;
+    width: 40px; /* Custom width for the language flag to make it fit the navbar, same reason as the brand image */
+    border-radius: 5px; /* Curves the flag to make it less sharp */
 }
+/* End of custom navbar styles */
+/* ---------------------------------- */
 
+/* Carousel custom styles */
+/* ---------------------- */
 .carousel-content {
     position: absolute;
     bottom: 13%;
     left: 12%;
     color: white;
+    margin-right: 120px;
     text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.carousel img {
+    width: 100%;
+    height: 78vh;
+    object-fit: cover;
 }
 
 .carousel-content h1 {
     font-size: 56px;
     text-shadow: 3px 3px 4px black;
     animation: EaseIn 1.4s ease-out forwards;
+    container-name: carouselH1;
 }
+
 .carousel-content p {
     font-size: 32px;
     text-shadow: 3px 3px 4px black;
     animation: EaseIn 1.4s ease-out forwards 0.14s;
+    container-name: carouselP;
 }
+/* End of custom carousel styles */
+/* ----------------------------- */
+
 
 .page-wrapper {
-    width: 62vw;
-    margin: auto;
-    margin-top: 32px;
+    width: 62vw; /* Adds a set width for the rest of the content on the page */
+    margin: auto; /* Centers everything */
+    margin-top: 32px; /* Separates the content from the banner */
 }
 
 .section-h2 {
-    margin-top: 42px;
-    font-weight: 500;
+    margin-top: 42px; /* Separates the title from the banner */
+    font-weight: 500; /* Bolds the text */
 }
 
 .section-divider {
-    margin-top: 6px;
-    border: 4px solid rgb(255, 0, 0);
-    width: 15%;
+    margin-top: 6px; /* Separates the border from the text above it */
+    border: 4px solid rgb(255, 0, 0); /* Adds a border to the bottom of the text */
+    width: 15%; /* Sets a width to the border to not make it exceed too much */
 }
 
+/* Styles for the news section */
+/* --------------------------- */
 .news {
-    display: flex;
-    margin-top: 48px;
-    justify-content: space-between;
+    display: flex; /* Sets the display to flexbox, placing every column next to each other in a row formation */
+    margin-top: 48px; /* Separates the content from the header above it */
+    justify-content: space-between; /* Adds evenly space between all of the columns */
 }
-
 
 .news img {
-    width: 100%;
+    width: 100%; /* Sets a responsive width for the images inside the news container, this is to shrink or expand them according to the space it has */
     height: auto;
 }
 
 .news .column {
-    flex: 33% 1;
-    margin-right: 42px;
+    flex: 33% 1; /* Sets a width for every column so it's evenly spaced */
+    margin-right: 42px; /* Separates every column from eachother */
 }
 
 .column h3{
-    padding-top: 12px;
+    padding-top: 12px; /* Separates the news header from the image */
 }
 
 .column p {
-    padding-top: 6px;
+    padding-top: 6px; /* Separates the news introduction from the header */
 }
 
 .column a {
-    color: red;
-    text-decoration: none;
+    color: red; /* Sets the "Read more" button color to red */
+    text-decoration: none; /* Removes the underline from the a element */
 }
 
 .column h4{
-    margin-bottom: 26px;
+    margin-bottom: 16px; /* Adds some margin to the bottom of every link to separate it from the news article separator */
 }
+/* End of news section styles */
+/* -------------------------- */
 
-.column hr {
-    padding-top: -12px
-}
+/* Media queries */
 
-.donations {
-    margin-top: 72px;
-}
+@media only screen and (max-width: 750px){
 
-.donations h1 {
-    color: rgb(0, 173, 173);
-    font-size: 76px;
-}
+    .page-wrapper {
+        width: 100%;
+        margin: auto;
+    }
+    
+    .news {
+        flex-direction: column;
+    }
 
-.donations p {
-    font-size: 36px;
-}
+    .news img {
+        width: 100%
+    }
 
-.members {
-    margin-top: 112px;
-    text-align: right;
-}
+    .section-h2, .section-divider {
+        margin-left: 12px;
+    }
 
-.members h1 {
-    color: rgb(0, 175, 0);
-    font-size: 76px;
-}
+    .news .column {
+        margin-right: 12px;
+        margin-left: 12px;
+    }
 
-.members p {
-    font-size: 36px;
+    .carousel h1 {
+        font-size: 7.4vw;
+    }
+
+    .carousel p {
+        font-size: 4.2vw;
+    }
 }

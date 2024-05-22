@@ -1,0 +1,80 @@
+/* Custom font */ 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Applied custom font and added margin to the top to support the fixed navbar */
+body {
+    font-family: "Rubik", sans-serif;
+    margin-top: 81px;
+}
+
+/* Navbar custom styles */
+/* -------------------- */
+.navbar {
+    background-color: #fff; /* Custom background color */
+    box-shadow: 2px 2px 6px 4px rgba(0, 0, 0, 0.145); /* Shadow to add more emphasis on the navbar */
+}
+
+.membership-link {
+    padding-right: 34px; /* Separated the memebership link from the language selector */ 
+    padding-top: 2px; /* Aligned the y axis of the link to match the others */
+}
+
+.active { /* This could also be considered as a global style */
+    font-weight: 700; /* Added bold text to the active item - this will work for any link that's accessed in their correspondent page */
+} 
+
+.navbar button {
+    margin-right: 12px; /* Separated the hamburger icon from the right margin of the page to make it stand out */
+}
+
+.nav-link {
+    transition: all .2s ease-out; /* Transition for the hover color change */
+    color: black; /* This sets the color black to all of the links inside navbar */
+}
+
+.nav-link:hover {
+    color: turquoise; /* Color to change on hover */
+}
+
+.membership-link .nav-link:hover {
+    color: red; /* Exclusive color hover for membership */
+}
+
+.nav-item {
+    padding-left: 16px; /* Separates the links further from eachother */
+}
+
+.navbar-brand img {
+    margin-left: 22px; /* Separates the image from the left margin to make it stand out */
+    width: 220px; /* Custom width for the brand image to make it fit the navbar without exceeding the predefined height */
+    margin-right: 32px; /* Margin to separate the first link of the navbar from the logo further than normal */
+}
+
+.language-flag {
+    width: 40px; /* Custom width for the language flag to make it fit the navbar, same reason as the brand image */
+    border-radius: 5px; /* Curves the flag to make it less sharp */
+}
+/* End of custom navbar styles */
+/* ---------------------------------- */
+
+.page-wrapper {
+    width: 78vw;
+    margin: auto;
+}
+
+.sections {
+    display: flex;
+}
+
+.main-content {
+    margin-top: 35px;
+    margin-right: 126px;
+}
+
+.content-table {
+    width: 54vw;
+    margin: auto;
+    margin-top: 64px;
+    text-align: left;
+    background-color: #ebebeb;
+}

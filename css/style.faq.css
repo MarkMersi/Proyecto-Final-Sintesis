@@ -110,8 +110,6 @@ body {
 
 .contact-form {
     flex: 40% 1;
-    width: fit-content;
-    height: fit-content;
 }
 
 .contact-form h1 {
@@ -122,11 +120,13 @@ body {
 }
 
 .contact-form form {
-    display: block;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 28vw;
     margin: auto;
     margin-top: 22px;
+    margin-left: 62px;
 }
 
 .contact-form input {
@@ -143,10 +143,9 @@ body {
 }
 
 .contact-form textarea {
-    min-width: 0;
+    flex: 100% 1 1;
     border: none;
     height: 3vh;
-    width: 100%;
     resize: none;
     outline: none;
     border-bottom: 1px solid rgb(207, 207, 207);
@@ -158,11 +157,12 @@ body {
 }
 
 .contact-form #submit {
-    width: 100%;
+    width: 90px;
     margin: auto;
     margin-top: 22px;
     padding: 8px;
-    border: 1px solid #8f8f9d;
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 94, 0));
+    color: #fff;
     border-radius: 5px;
     text-align: center;
 }
@@ -180,4 +180,24 @@ body {
 
 .contact-form .error-border {
     border-bottom: 1px solid red;
+}
+
+@media only screen and (max-width: 990px){
+    .sections {
+        flex-direction: column;
+    }
+
+    .contact-form form {
+        width: 80%;
+        flex-flow: column wrap;
+        margin-left: 32px;
+    }
+
+    .contact-form input {
+        width: 80%;
+    }
+
+    .contact-form textarea {
+        width: 80%;
+    }
 }

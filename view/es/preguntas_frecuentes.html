@@ -26,7 +26,7 @@
                     <a href="./sobre_nosotros.html" class="nav-link">¿Quienes somos?</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">Preguntas Frecuentes</a>
+                    <a href="#" class="nav-link active">Soporte</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
@@ -175,31 +175,38 @@
             <section class="contact-form">
                 <h1>Contáctanos</h1>
                 <form onsubmit="event.preventDefault(); validateForm()">
-                    <p>Nombre:</p>
-                    <input type="text" id="FirstName" placeholder="Tu nombre">
-                    <br>
-                    <small class="error"></small>
-                    
-                    <p>Apellido:</p>
-                    <input type="text" id="SecondName" placeholder="Tu apellido">
-                    <br>
-                    <small class="error"></small>
-                    
-                    <p>E-Mail:</p>
-                    <input type="text" id="email" placeholder="Tu email">
-                    <br>
-                    <small class="error"></small>
-                    
-                    <p>Número de teléfono:</p>
-                    <input type="text" id="PhoneNumber" placeholder="Núm. Teléfono">
-                    <br>
-                    <small class="error"></small>
-                    
-                    <p>Mensaje:</p>
-                    <textarea placeholder="Escribe tu texto aquí..." id="message"></textarea>
-                    <small class="error"></small>
-                    <br>
-                    <input type="submit" id="submit" value="Enviar">
+                    <div>
+                        <p>Nombre:</p>
+                        <input type="text" id="FirstName" placeholder="Tu nombre">
+                        <br>
+                        <small class="error"></small>
+                    </div>
+                    <div>
+                        <p>Apellido:</p>
+                        <input type="text" id="SecondName" placeholder="Tu apellido">
+                        <br>
+                        <small class="error"></small>
+                    </div>
+                    <div>
+                        <p>E-Mail:</p>
+                        <input type="text" id="email" placeholder="Tu email">
+                        <br>
+                        <small class="error"></small>
+                    </div>
+                    <div>
+                        <p>Número de teléfono:</p>
+                        <input type="text" id="PhoneNumber" placeholder="Núm. Teléfono">
+                        <br>
+                        <small class="error"></small>
+                    </div>
+                    <div>
+                        <p>Mensaje:</p>
+                        <textarea placeholder="Escribe tu texto aquí..." id="message"></textarea>
+                        <br>
+                        <small class="error"></small>
+                        <br>
+                        <input type="submit" id="submit" value="Enviar">
+                    </div>
                 </form>
             </section>
         </div>

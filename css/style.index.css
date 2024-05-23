@@ -61,6 +61,10 @@ body {
     color: red; /* Exclusive color hover for membership */
 }
 
+.lang-selector .nav-link:hover {
+    color: black; /* Exclusive color hover for language selector */
+}
+
 .nav-item {
     padding-left: 16px; /* Separates the links further from eachother */
 }
@@ -74,6 +78,15 @@ body {
 .language-flag {
     width: 40px; /* Custom width for the language flag to make it fit the navbar, same reason as the brand image */
     border-radius: 5px; /* Curves the flag to make it less sharp */
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transition: .2s ease-out;
+}
+
+.language-flag:hover {
+    opacity: 0.6;
+    filter: alpha(opacity=40);
+    transition: .2s ease-out;
 }
 /* End of custom navbar styles */
 /* ---------------------------------- */
@@ -124,7 +137,7 @@ body {
 .section-divider {
     margin-top: 6px; /* Separates the border from the text above it */
     border: 4px solid rgb(255, 0, 0); /* Adds a border to the bottom of the text */
-    width: 15%; /* Sets a width to the border to not make it exceed too much */
+    width: 140px; /* Sets a width to the border to not make it exceed too much */
 }
 
 /* Styles for the news section */
@@ -154,8 +167,14 @@ body {
 }
 
 .column a {
+    font-size: 22px;
+    transition: all .2s ease-out; /* Transition for the hover color change */
     color: red; /* Sets the "Read more" button color to red */
     text-decoration: none; /* Removes the underline from the a element */
+}
+
+.column a:hover {
+    color: gray;
 }
 
 .column h4{

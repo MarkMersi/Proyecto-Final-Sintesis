@@ -59,7 +59,7 @@ body {
 /* ---------------------------------- */
 
 .page-wrapper {
-    width: 78vw;
+    width: 84vw;
     margin: auto;
 }
 
@@ -67,85 +67,117 @@ body {
     display: flex;
 }
 
-.main-content {
-    margin-top: 35px;
-    margin-right: 126px;
-    flex: 65% 1;
+.faq {
+    flex: 60% 1;
 }
 
-.main-content .title,
-.main-content .subtitle {
-    padding-bottom: 22px;
+.fq-title {
+    margin-top: 22px;
 }
 
-.main-content .subtitle {
-    font-size: 22px;
-    padding-top: 8px;
+.fq-intro {
+    margin-top: 12px;
+    font-size: 19px;
+    margin-bottom: 62px;
 }
 
-.main-content ul li {
-    padding-top: 12px;
+.fq-subtitle {
+    margin-bottom: -24px;
 }
 
-.main-content ol li {
-    padding-top: 12px;
+.fq-question {
+    margin-top: 52px;
+    margin-bottom: 10px;
 }
 
-.content-table {
+.faq ul {
+    margin-top: -14px;
+    margin-bottom: 22px;
+}
+
+.faq ul li {
+    padding-top: 6px;
+    padding-bottom: 2px;
+}
+
+.faq ol {
+    list-style: none;
+}
+
+.faq ul {
+    list-style: disc;
+}
+
+.contact-form {
+    flex: 40% 1;
+    width: fit-content;
+    height: fit-content;
+}
+
+.contact-form h1 {
+    font-size: 26px;
+    margin-top: 22px;
+    text-align: center;
+    margin-right: 102px;
+    margin-bottom: 42px;
+}
+
+.contact-form form {
+    display: block;
+    flex-wrap: wrap;
+    width: 28vw;
     margin: auto;
-    margin-top: 64px;
-    text-align: left;
-    background-color: #ebebeb;
-    padding-bottom: 18px;
-    flex: 35% 1;
+    margin-top: 22px;
 }
 
-
-.ct-title {
-    margin-top: 8px;
-    margin-left: 12px;
-    padding-bottom: 12px;
+.contact-form input {
+    margin-right: 22px;
+    border: none;
+    justify-self: center;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    outline: none;
+    transition: all .2s ease-in;
 }
 
-.content-table a {
-    padding-bottom: 12px;
+.contact-form form p {
+    margin-top: 22px;
 }
 
-.ct-link, 
-.content-table .active {
-    margin-left: 24px;
-    line-height: 34px;
+.contact-form textarea {
+    flex: 100% 1;
+    min-width: 0;
+    border: none;
+    width: 100%;
+    height: 10vh;
+    resize: none;
+    outline: none;
+    margin-top: 22px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    transition: all .2s ease-out;
 }
 
-.content-table .active:link, 
-.content-table .active:visited {
-    color: black;
-    text-decoration: none;
+.contact-form textarea::-webkit-scrollbar {
+    width: 4px;
 }
 
-.ct-link:link,
-.ct-link:visited {
-    color: black;
-    transition: all .2s ease-out; /* Transition for the hover color change */
-    text-decoration: none;
+.contact-form #submit {
+    margin-top: 22px;
+    padding: 8px;
+    border: 1px solid #8f8f9d;
+    border-radius: 5px;
 }
 
-.ct-link:hover,
-.ct-link:focus,
-.ct-link:active {
-    color: turquoise; /* Color to change on hover */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-bottom: 1px solid red;
 }
 
-@media only screen and (max-width: 990px){
-    .sections {
-        flex-direction: column;
-    }
+.contact-form .error {
+    color: red;
+    font-weight: 500;
+}
 
-    .main-content {
-        margin-right: 0;
-    }
-
-    .content-table {
-        width: 100%;
-    }
+.contact-form .error-border {
+    border-bottom: 1px solid red;
 }

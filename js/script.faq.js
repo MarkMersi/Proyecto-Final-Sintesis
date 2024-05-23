@@ -30,6 +30,11 @@ function validateForm(){
         errorNodes[3].innerText = "El número de teléfono és inválido";
         phoneNumber.classList.add("error-border");
     }
+
+    if(message.value.length < 1){
+        errorNodes[4].innerText = "El contenido del mensaje no puede estar en blanco";
+        message.classList.add("error-border");
+    }
 }
 
 // Function that clears error messages
@@ -40,7 +45,8 @@ function clearMessages(){
     nameInput.classList.remove("error-border")
     surnameInput.classList.remove("error-border")
     email.classList.remove("error-border")
-    phoneNumber.classList.add("error-border")
+    phoneNumber.classList.remove("error-border")
+    message.classList.remove("error-border")
 }
 
 // Function that checks if the email is correct
@@ -51,6 +57,19 @@ function emailIsValid(email){
 
 // Function that checks if the phone number is correct
 function phoneNumberIsValid(phoneNumber){
-    let pattern = /^\d{3} \d{3} \d{4}$/
+    let pattern = /^\d{3} \d{3} \d{3}$/
     return pattern.test(phoneNumber)
 }
+
+// Dealing with Textarea Height
+function calcHeight(value) {
+    let numberOfLineBreaks = (value.match(/\n/g) || []).length;
+    // min-height + lines x line-height + padding + border
+    let newHeight = 20 + numberOfLineBreaks * 20 + 12 + 2;
+    return newHeight;
+  }
+  
+  let textarea = document.querySelector("#message");
+  textarea.addEventListener("keyup", () => {
+    textarea.style.height = calcHeight(textarea.value) + "px";
+  });

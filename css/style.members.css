@@ -37,10 +37,6 @@ body {
     color: turquoise; /* Color to change on hover */
 }
 
-.membership-link .nav-link:hover {
-    color: red; /* Exclusive color hover for membership */
-}
-
 .nav-item {
     padding-left: 16px; /* Separates the links further from eachother */
 }
@@ -58,132 +54,93 @@ body {
 /* End of custom navbar styles */
 /* ---------------------------------- */
 
-.page-wrapper {
-    width: 84vw;
-    margin: auto;
+.hidden {
+    display: none;
 }
 
-.sections {
-    display: flex;
-}
-
-.faq {
-    flex: 60% 1;
-}
-
-.fq-title {
-    margin-top: 22px;
-}
-
-.fq-intro {
-    margin-top: 12px;
-    font-size: 19px;
-    margin-bottom: 62px;
-}
-
-.fq-subtitle {
-    margin-bottom: -24px;
-}
-
-.fq-question {
-    margin-top: 52px;
-    margin-bottom: 10px;
-}
-
-.faq ul {
-    margin-top: -14px;
-    margin-bottom: 22px;
-}
-
-.faq ul li {
-    padding-top: 6px;
-    padding-bottom: 2px;
-}
-
-.faq ol {
-    list-style: decimal;
-}
-
-.faq ol li {
-    padding-right: 22px;
-}
-
-.faq ul {
-    list-style: disc;
-}
-
-.contact-form {
-    flex: 40% 1;
-}
-
-.contact-form h1 {
-    font-size: 26px;
-    margin-top: 22px;
+.form-title {
     text-align: center;
-    margin-bottom: 42px;
+    margin-bottom: 16px;
 }
 
-.contact-form form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 28vw;
-    margin: auto;
-    margin-top: 22px;
-    margin-left: 62px;
+.form-intro {
+    text-align: center;
 }
 
-.contact-form input {
-    margin-right: 22px;
-    border: none;
-    justify-self: center;
-    border-bottom: 1px solid rgb(207, 207, 207);
+form input[type = "text"] {
     outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
     transition: all .2s ease-in;
 }
 
-.contact-form form p {
-    margin-top: 22px;
+form p {
+    margin-top: 18px;
 }
 
-.contact-form textarea {
-    flex: 100% 1 1;
-    border: none;
-    height: 3vh;
-    resize: none;
-    outline: none;
-    border-bottom: 1px solid rgb(207, 207, 207);
-    transition: all .2s ease-out;
+form input[type="text"]:focus {
+    border-bottom: 1px solid rgb(255, 0, 0)
 }
 
-.contact-form textarea::-webkit-scrollbar {
-    width: 4px;
-}
-
-.contact-form #submit {
-    width: 90px;
+form {
+    width: 840px;
     margin: auto;
-    margin-top: 22px;
+}
+
+form .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form .block {
+    display: block;
+    width: auto;
+    margin: auto;
+    text-align: center;
+    margin-top: 32px;
+}
+
+form .block p {
+    text-align: left;
+}
+
+form .block textarea {
+    width: 840px;
+    height: 12vh;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    transition: border-bottom .2s ease-in;
+    resize: none;
+}
+
+form .block textarea:focus {
+    border-bottom: 1px solid rgb(255, 0, 0);
+}
+
+form .block #submit {
+    margin: auto;
+    margin-top: 12px;
+    width: 90px;
     padding: 8px;
+    outline: none;
+    border: none;
     background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 94, 0));
     color: #fff;
     border-radius: 5px;
-    text-align: center;
 }
 
-.contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus,
-.contact-form textarea:focus {
-    border-bottom: 1px solid red
-}
-
-.contact-form .error {
+.error {
     color: red;
-    font-weight: 500;
 }
 
-.contact-form .error-border {
+form .error-border {
     border-bottom: 1px solid red;
+}
+
+.small-margin {
+    margin-top: 42px;
 }
 
 .obligatory {
@@ -191,22 +148,23 @@ body {
     margin-left: 4px;
 }
 
+.optional {
+    margin-left: 4px;
+}
+
 @media only screen and (max-width: 990px){
-    .sections {
+    form {
+        margin-left: 34px;
+    }
+    form .flex {
         flex-direction: column;
     }
 
-    .contact-form form {
-        width: 80%;
-        flex-flow: column wrap;
-        margin-left: 32px;
+    form .block {
+        text-align: left;
     }
 
-    .contact-form input {
-        width: 80%;
-    }
-
-    .contact-form textarea {
-        width: 80%;
+    form .block textarea {
+        width: 90vw;
     }
 }

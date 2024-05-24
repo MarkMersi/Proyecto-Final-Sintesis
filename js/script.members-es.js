@@ -4,6 +4,8 @@ const surnameInput = document.querySelector("#SecondName");
 const email = document.querySelector("#email");
 const phoneNumber = document.querySelector("#PhoneNumber");
 const message = document.querySelector("#message");
+const address = document.querySelector('#address');
+const addressP = document.querySelector('#addressP');
 const errorNodes = document.querySelectorAll(".error");
 
 // Functions that execute themselves on the validation of the form when the submit button is pressed.
@@ -31,8 +33,14 @@ function validateForm(){
         phoneNumber.classList.add("error-border");
     }
 
+    if (address.value.length < 1){
+        errorNodes[4].innerText = "La dirección no puede estar en blanco";
+        address.classList.add("error-border");
+        addressP.classList.add("small-margin");
+    }
+    
     if(message.value.length < 1){
-        errorNodes[4].innerText = "El contenido del mensaje no puede estar en blanco";
+        errorNodes[5].innerText = "El contenido del mensaje no puede estar en blanco";
         message.classList.add("error-border");
     }
 }
@@ -46,6 +54,7 @@ function clearMessages(){
     surnameInput.classList.remove("error-border")
     email.classList.remove("error-border")
     phoneNumber.classList.remove("error-border")
+    address.classList.remove("error-border")
     message.classList.remove("error-border")
 }
 

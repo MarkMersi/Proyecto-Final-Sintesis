@@ -20,7 +20,7 @@ body {
     padding-top: 2px; /* Aligned the y axis of the link to match the others */
 }
 
-.active { /* This could also be considered as a global style */
+.navbar .active {
     font-weight: 700; /* Added bold text to the active item - this will work for any link that's accessed in their correspondent page */
 } 
 
@@ -41,6 +41,10 @@ body {
     color: red; /* Exclusive color hover for membership */
 }
 
+.lang-selector .nav-link:hover {
+    color: black; /* Exclusive color hover for language selector */
+}
+
 .nav-item {
     padding-left: 16px; /* Separates the links further from eachother */
 }
@@ -54,12 +58,21 @@ body {
 .language-flag {
     width: 40px; /* Custom width for the language flag to make it fit the navbar, same reason as the brand image */
     border-radius: 5px; /* Curves the flag to make it less sharp */
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transition: .2s ease-out;
+}
+
+.language-flag:hover {
+    opacity: 0.6;
+    filter: alpha(opacity=40);
+    transition: .2s ease-out;
 }
 /* End of custom navbar styles */
 /* ---------------------------------- */
 
 .page-wrapper {
-    width: 78vw;
+    width: 78vw; /* Adds a set width for the rest of the content on the page */
     margin: auto;
 }
 

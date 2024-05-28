@@ -20,7 +20,7 @@ body {
     padding-top: 2px; /* Aligned the y axis of the link to match the others */
 }
 
-.navbar .active {
+.active {
     font-weight: 700; /* Added bold text to the active item - this will work for any link that's accessed in their correspondent page */
 } 
 
